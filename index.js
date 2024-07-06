@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 // Define CORS options
 const corsOptions = {
-  origin: ['http://localhost:5137', 'https://accredian-frontend-task-two-psi.vercel.app/'],
+  origin: ['http://localhost:5173', 'https://accredian-frontend-task-two-psi.vercel.app/'],
   credentials: true,  // <-- Required to pass cookies
 };
 
