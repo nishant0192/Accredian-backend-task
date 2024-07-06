@@ -9,15 +9,15 @@ require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
 
-// Define CORS options
+
 const corsOptions = {
   origin: ['http://localhost:5173', 'https://accredian-frontend-task-two-psi.vercel.app/'],
-  credentials: true,  // <-- Required to pass cookies
+  credentials: true,
 };
 
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(corsOptions)); // Apply CORS with options
+app.use(cors(corsOptions));
 app.use('/api/users', userRoutes);
 app.use('/api', referralRoutes);
 app.use('/api/program', programRoutes);
