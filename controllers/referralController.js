@@ -48,7 +48,7 @@ exports.createReferral = async (req, res) => {
     });
 
     res.status(201).json(referral);
-  } catch (error) {
+  } catch (error) { 
     console.error('Error creating referral:', error);
     res.status(500).json({ error: 'Internal server error.' });
   }

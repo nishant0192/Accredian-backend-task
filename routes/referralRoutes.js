@@ -5,7 +5,7 @@ const { authenticateToken } = require('../middlewares/auth');
 
 const router = express.Router();
 
-router.post('/referral', authenticateToken, [
+router.post('/referral', [
   check('referrerName').notEmpty().withMessage('Referrer name is required'),
   check('referrerEmail').isEmail().withMessage('Valid referrer email is required'),
   check('refereeName').notEmpty().withMessage('Referee name is required'),
